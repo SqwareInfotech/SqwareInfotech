@@ -32,7 +32,7 @@ const Footer = () => {
             <div className="w-full md:w-1/3 mb-8">
               <h3 className="text-xl font-semibold mb-4 gradient-text">Contact Us</h3>
               {contactDetails.map((item) => (
-                <p className="text-gray-400 mb-4">
+                <p key={item.id} className="text-gray-400 mb-4">
                   <span className="font-bold">{item.title}:</span> {item.value}
                 </p>
               ))}
