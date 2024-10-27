@@ -61,7 +61,7 @@ import notification2 from "./notification/image-2.png";
 import notification3 from "./notification/image-3.png";
 import notification4 from "./notification/image-4.png";
 
-import featureCard0 from "./features/card-0.svg";
+import featureCard0 from "./card-0.svg";
 import featureCard1 from "./features/card-1.svg";
 import featureCard2 from "./features/card-2.svg";
 import featureCard3 from "./features/card-3.svg";
