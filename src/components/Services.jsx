@@ -23,7 +23,7 @@ const Services = () => {
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
               style={{
-                backgroundImage: `url(${item.backgroundUrl})`,
+                backgroundImage: `url(${process.env.NODE_ENV === 'production' ? '/SqwareInfotech' : ''}${item.backgroundUrl})`,
               }}
               key={item.id}
               onMouseEnter={() => setHoveredCardId(item.id)}
