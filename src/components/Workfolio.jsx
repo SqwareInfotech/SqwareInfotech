@@ -37,19 +37,32 @@ const Workfolio = () => {
   return(
   
   <Section crosses id="workfolio">
-    <div className="container md:pb-10">
+    <div className="container">
       <Heading tag="Work Done at Sqware Infotech" title="What we’re working on" />
 
-      <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
+      <div className="relative grid gap-6 md:grid-cols-2 md:gap-8 md:pb-[7rem]">
         {roadmap.map((item) => {
-          const status = item.status === "done" ? "Done" : "In progress";
+          // const status = item.status === "done" ? "Done" : "In progress";
 
           return (
-            <div
+            <motion.div
               className={`md:flex even:md:translate-y-[7rem] p-1 rounded-[2.5rem] ${
                 item.colorful ? "bg-conic-gradient" : "bg-n-6"
               }`}
               key={item.id}
+              initial={{
+                opacity: 0,
+                x: item.id % 2 === 0 ? -50 : 50,
+                y: window.innerWidth < 768 ? 0 : item.id % 2 === 0 ? 0 : 125, // Adjust y for mobile (<768px)
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0, 
+                transition: {
+                  duration: 1 
+                }
+              }}
+              viewport={{ once: true }}
             >
               <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
                 <div className="absolute top-0 left-0 max-w-full">
@@ -62,7 +75,7 @@ const Workfolio = () => {
                   />
                 </div>
                 <div className="relative z-1">
-                  <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
+                  {/* <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                     <Tagline>{item.date}</Tagline>
 
                     <div className="flex items-center px-4 py-1 bg-n-1 rounded text-n-8">
@@ -75,7 +88,7 @@ const Workfolio = () => {
                       />
                       <div className="tagline">{status}</div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="my-10 -my-10 -mx-15">
                     <img
@@ -103,7 +116,7 @@ const Workfolio = () => {
                 </motion.p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
 

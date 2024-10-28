@@ -67,7 +67,7 @@ const ContactUs = () => {
     };
 
     return (
-        <Section crosses className="pt-5" id="contactus"
+        <Section crosses id="contactus"
 >
             <div className="container relative z-2 ">
 
