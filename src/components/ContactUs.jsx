@@ -150,7 +150,7 @@ const ContactUs = () => {
                                 className="flex flex-col space-y-4 py-6"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ delay: 0.3, duration: 1 }}
+                                transition={{ delay: 3, duration: 1 }}
                             >
                                 <motion.input
                                     type="text"
