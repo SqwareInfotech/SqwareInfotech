@@ -32,9 +32,9 @@ const ContactUs = () => {
     const [error, setError] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    const controls = useAnimation(); 
+    const controls = useAnimation();
 
-    const isInView = useInView(ref, { margin: "200px"});
+    const isInView = useInView(ref, { margin: "200px" });
 
     useEffect(() => {
         // If the element is in view when the component mounts, trigger the animation
@@ -57,18 +57,27 @@ const ContactUs = () => {
             )
             .then(
                 (result) => {
-                    setSuccess(true);
+                    setTimeout(() => {
+                        setSuccess(true);
+                        setError(false);
+                        clearFormFields();
+                      }, 1000);
                 },
                 (error) => {
+                    setSuccess(false);
                     setError(true);
                     console.log(error.text);
                 }
             );
     };
 
+    const clearFormFields = () => {
+        formRef.current.reset();
+      };
+
     return (
         <Section crosses id="contactus"
->
+        >
             <div className="container relative z-2 ">
 
 
@@ -85,14 +94,14 @@ const ContactUs = () => {
                         initial="initial"
                         animate={controls}
                     >
-                        <motion.div className="flex flex-col gap-10 text-left lg:text-left" variants={variants}  animate={controls}>
+                        <motion.div className="flex flex-col gap-10 text-left lg:text-left" variants={variants} animate={controls}>
                             <motion.h1 className="text-[64px] leading-tight lg:text-[100px] gradient-text" variants={variants} animate={controls}>Let’s work together</motion.h1>
-                            
+
                             {contactDetails.map((item) => (
                                 <motion.div key={item.id} className="text-lg lg:text-xl" variants={variants} animate={controls}>
-                                <h2 className="font-semibold">{item.title}</h2>
-                                <span>{item.value}</span>
-                            </motion.div>
+                                    <h2 className="font-semibold">{item.title}</h2>
+                                    <span>{item.value}</span>
+                                </motion.div>
                             ))}
 
                         </motion.div>
@@ -141,34 +150,47 @@ const ContactUs = () => {
                                 className="flex flex-col space-y-4 py-6"
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
-                                transition={{ delay: 3, duration: 1 }}
-                                animate={controls}
+                                transition={{ delay: 0.3, duration: 1 }}
                             >
-                                <input
+                                <motion.input
                                     type="text"
                                     required
                                     placeholder="Name"
                                     name="name"
                                     className="p-4 rounded-md bg-transparent border border-white text-white focus:outline-none"
+                                    disabled={success} // Disable input after success
+                                    initial={{ opacity: 1 }}
+                                    animate={success ? { opacity: 0.5 } : { opacity: 1 }} // Animate opacity on success
+                                    transition={{ duration: 0.5 }}
                                 />
-                                <input
+                                <motion.input
                                     type="email"
                                     required
                                     placeholder="Email"
                                     name="email"
                                     className="p-4 rounded-md bg-transparent border border-white text-white focus:outline-none"
+                                    disabled={success} // Disable input after success
+                                    initial={{ opacity: 1 }}
+                                    animate={success ? { opacity: 0.5 } : { opacity: 1 }} // Animate opacity on success
+                                    transition={{ duration: 0.5 }}
                                 />
-                                <textarea
+                                <motion.textarea
                                     rows={8}
                                     placeholder="Message"
                                     name="message"
                                     className="p-4 rounded-md bg-transparent border border-white text-white focus:outline-none"
+                                    disabled={success} // Disable textarea after success
+                                    initial={{ opacity: 1 }}
+                                    animate={success ? { opacity: 0.5 } : { opacity: 1 }} // Animate opacity on success
+                                    transition={{ duration: 0.5 }}
                                 />
-                                {/* <button className="p-4 rounded-md bg-orange-500 text-white font-semibold hover:bg-orange-600 transition">
-                                    Submit
-                                </button> */}
-                                <Button className="flex" >
-                                    Contact us
+                                <Button
+                                    className={`flex ${success ? "opacity-50 cursor-not-allowed" : ""
+                                        }`}
+                                    type="submit"
+                                    disabled={success} // Disable button after success
+                                >
+                                    {success ? "Submitted!" : "Contact us"}
                                 </Button>
                                 {error && <p className="text-red-500">Oops, something went wrong!</p>}
                                 {success && <p className="text-green-500">We got your mail!</p>}

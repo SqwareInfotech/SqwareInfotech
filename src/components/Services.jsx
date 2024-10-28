@@ -5,22 +5,22 @@ import Arrow from "../assets/svg/Arrow";
 import { GradientLight } from "./design/GradientLight";
 import ClipPath from "../assets/svg/ClipPath";
 import { useState } from 'react';
+import { motion } from "framer-motion";
 
 const Services = () => {
   const [hoveredCardId, setHoveredCardId] = useState(null);
-
 
   return (
     <Section crosses id="services">
       <div className="container relative z-2">
         <Heading
-                tag="Services at Sqware Infotech"
-                title="Develop Smarter, Grow Bigger with Sqware Infotech"
-            />
+          tag="Services at Sqware Infotech"
+          title="Develop Smarter, Grow Bigger with Sqware Infotech"
+        />
 
         <div className="flex flex-wrap gap-10 mb-10 justify-center">
           {services.map((item) => (
-            <div
+            <motion.div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[22rem]"
               style={{
                 backgroundImage: `url("${item.backgroundUrl}")`,
@@ -28,8 +28,15 @@ const Services = () => {
               key={item.id}
               onMouseEnter={() => setHoveredCardId(item.id)}
               onMouseLeave={() => setHoveredCardId(null)}
+              whileHover={{ scale: 1.02 }} // Slightly scale up on hover
+              initial={{ opacity: 0, y: 50 }} // Animation when card enters view
+              whileInView={{ opacity: 1, y: 0 }} // Fade in and move up
+              transition={{
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              viewport={{ once: false }}
             >
-
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
                 <div className="flex-grow">
                   <h5 className="h5 mb-5 gradient-text">{item.title}</h5>
@@ -62,14 +69,13 @@ const Services = () => {
                       width={380}
                       height={362}
                       alt={item.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover blur-lg"
                     />
                   )}
                 </div>
               </div>
-
               <ClipPath />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
