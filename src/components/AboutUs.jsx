@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import Section from "./Section";
 import Heading from "./Heading";
 import { LeftLine, RightLine } from "./design/Pricing";
-import { logoZRotate } from "../assets";
 
+import { Globe } from "./Globe"; // Adjust path as per your project structure
 
 
 const aboutVariants = {
@@ -62,22 +62,9 @@ const AboutUs = () => {
                             </motion.div>
                         </div>
 
-                        <div className="relative w-full max-w-xl">
+                        <div className="relative">
+                        <Globe/>
 
-
-                            <div className="flex-1 flex justify-center lg:justify-end">
-                                <motion.video
-                                    autoPlay
-                                    loop
-                                    muted
-                                    playsInline
-                                    className="w-50 h-auto brightness-120 contrast-125  " // Adjust the size as needed
-                                    variants={aboutVariants}
-                                >
-                                    <source src={logoZRotate} type="video/webm" />
-                                    Your browser does not support the video tag.
-                                </motion.video>
-                            </div>
                         </div>
                     </motion.div>
                     <LeftLine />

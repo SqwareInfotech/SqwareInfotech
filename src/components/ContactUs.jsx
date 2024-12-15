@@ -6,7 +6,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import Button from "./Button";
-import { contactDetails } from "../constants";
+import { contactDetails, socials } from "../constants";
 
 
 
@@ -97,10 +97,19 @@ const ContactUs = () => {
                         <motion.div className="flex flex-col gap-10 text-left lg:text-left" variants={variants} animate={controls}>
                             <motion.h1 className="text-[64px] leading-tight lg:text-[100px] gradient-text" variants={variants} animate={controls}>Let’s work together</motion.h1>
 
-                            {contactDetails.map((item) => (
+                            {contactDetails.map((item) => ( item.show &&
                                 <motion.div key={item.id} className="text-lg lg:text-xl" variants={variants} animate={controls}>
                                     <h2 className="font-semibold">{item.title}</h2>
-                                    <span>{item.value}</span>
+                                    {item.title.toLowerCase() == 'Email'.toLowerCase() ? (
+                                        <a
+                                        href={socials[7].url}
+                                        target="_blank"
+                                        className="text-white transition duration-200 hover:text-color-2">
+                                            <span>{item.value}</span>
+                                        </a>
+                                     ) : (
+                                        <span>{item.value}</span>
+                                    )}
                                 </motion.div>
                             ))}
 
@@ -190,7 +199,7 @@ const ContactUs = () => {
                                     type="submit"
                                     disabled={success} // Disable button after success
                                 >
-                                    {success ? "Submitted!" : "Contact us"}
+                                    {success ? "Submitted!" : "Send message"}
                                 </Button>
                                 {error && <p className="text-red-500">Oops, something went wrong!</p>}
                                 {success && <p className="text-green-500">We got your mail!</p>}

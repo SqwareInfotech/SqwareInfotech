@@ -72,6 +72,8 @@ export const notificationImages = [notification4, notification3, notification2];
 
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
+export const showCompanyLogos = true;
+
 export const brainwaveServices = [
   "Photo generating",
   "Photo enhance",
@@ -243,7 +245,7 @@ export const services = [
   {
     id: "0",
     title: "Software Development",
-    text: "We provide complete software development services, covering all phases, with thorough testing to ensure quality, performance, and scalability.",
+    text: "We deliver end-to-end solutions for web, app, and software development, ensuring high-quality performance, scalability, and seamless user experience.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon1,
     imageUrl: featureImage2,
@@ -251,8 +253,8 @@ export const services = [
   },
   {
     id: "1",
-    title: "Generative AI",
-    text: "We leverage advanced AI techniques, including machine learning and generative AI, to create intelligent and innovative solutions.",
+    title: "AI & Machine Learning",
+    text: "Harness the power of AI and machine learning to develop intelligent, data-driven systems that revolutionize your business processes.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon2,
     imageUrl: featureImage2,
@@ -261,7 +263,7 @@ export const services = [
   {
     id: "2",
     title: "Game Development",
-    text: "Our team develops immersive games and detailed 3D models, bringing your creative visions to life with cutting-edge technology.",
+    text: "Our team specializes in crafting immersive games and interactive playable ads that captivate audiences and drive engagement.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon3,
     imageUrl: featureImage2,
@@ -269,8 +271,8 @@ export const services = [
   },
   {
     id: "3",
-    title: "UI/UX Development",
-    text: "We create responsive websites with a focus on UI/UX design, ensuring your digital presence stands out in the competitive landscape.",
+    title: "UI/UX & Graphic Designing",
+    text: "We create stunning UI/UX designs and captivating graphics to ensure your brand's digital presence stands out and drives user satisfaction.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon4,
     imageUrl: featureImage2,
@@ -278,8 +280,8 @@ export const services = [
   },
   {
     id: "4",
-    title: "Data Analysis",
-    text: "Our data analysis services, powered by deep learning techniques, help uncover valuable insights and drive informed decision-making.",
+    title: "Business Intelligence",
+    text: "Our BI services leverage data visualization and analytics tools to transform complex data into actionable insights for informed decision-making.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon5,
     imageUrl: featureImage2,
@@ -287,8 +289,8 @@ export const services = [
   },
   {
     id: "5",
-    title: "IT Consultancy",
-    text: "Our IT consultancy services provide strategic solutions and expert advice, helping your business leverage the latest technologies effectively.",
+    title: "Digital Marketing",
+    text: "We provide tailored digital marketing strategies, from SEO to social media campaigns, to boost your online presence and drive business growth.",
     backgroundUrl: featureCard0,
     iconUrl: featureIcon6,
     imageUrl: featureImage2,
@@ -351,7 +353,7 @@ export const socials = [
     title: "Gmail",
     iconUrl: gmail,
     url: "https://mail.google.com/mail/?view=cm&fs=1&to=sqwareinfotech@gmail.com",
-    visible: true
+    visible: false
   },
 ];
 
@@ -360,16 +362,19 @@ export const contactDetails = [
     id: "0",
     title: "Address",
     value: "Vadodara, Gujarat, India",
+    show: true
   },
   {
     id: "1",
     title: "Email",
     value: "sqwareinfotech@gmail.com",
+    show: true
   },
   {
     id: "2",
     title: "Phone number",
     value: "+91 xxx-xxx-xxxx",
+    show: false
   },
 ];
 

@@ -7,7 +7,6 @@ import Services from "./components/Services";
 import AboutUs from "./components/AboutUs";
 import Workfolio from "./components/Workfolio";
 
-
 const App = () => {
   return (
     <>

@@ -31,9 +31,19 @@ const Footer = () => {
             </div>
             <div className="w-full md:w-1/3 mb-8">
               <h3 className="text-xl font-semibold mb-4 gradient-text">Contact Us</h3>
-              {contactDetails.map((item) => (
+              {contactDetails.map((item) => (item.show &&
                 <p key={item.id} className="text-gray-400 mb-4">
-                  <span className="font-bold">{item.title}:</span> {item.value}
+                  <span className="font-bold">{item.title}:</span>
+                  {item.title.toLowerCase() == 'Email'.toLowerCase() ? (
+                    <a
+                      href={socials[7].url}
+                      target="_blank"
+                      className="transition duration-200 hover:text-color-2">
+                      <span> {item.value}</span>
+                    </a>
+                  ) : (
+                    <span> {item.value}</span>
+                  )}
                 </p>
               ))}
             </div>
@@ -41,7 +51,7 @@ const Footer = () => {
               <h3 className="text-xl font-semibold mb-4 text gradient-text text-center">Follow Us</h3>
               <div className="flex justify-center space-x-4">
                 <ul className="flex gap-5 flex-wrap">
-                  {socials.map((item) => ( item.visible &&
+                  {socials.map((item) => (item.visible &&
                     < a
                       key={item.id}
                       href={item.url}

@@ -8,7 +8,7 @@ import { useRef } from "react";
 import Solving from "./Solving";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
-import { services } from "../constants";
+import { services, showCompanyLogos } from "../constants";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -120,7 +120,7 @@ const Hero = () => {
           <BackgroundSqwaresHero className="z-0"/>
         </div>
 
-        <CompanyLogos className="relative z-10 mt-20" />
+        {showCompanyLogos && <CompanyLogos className="relative z-10 mt-20" />}
       </div>
 
       <BottomLine />
