@@ -1,8 +1,6 @@
 import { curve, heroBackground } from "../assets";
-import Button from "./Button";
 import Section from "./Section";
 import { BackgroundSqwaresHero, BottomLine, Gradient } from "./design/Hero";
-// import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
 import { useRef } from "react";
 import Solving from "./Solving";
@@ -39,9 +37,6 @@ const Hero = () => {
           <p className="body-1 max-w-3xl mx-auto mt-12 mb-6 text-n-2 lg:mb-8">
             Unleash the power of cutting-edge software solutions and AI-powered technologies. Unlock your full potential with us to fuel growth and turn bold <span>visions into reality</span> 
           </p>
-          {/* <Button href="#services">
-            Get started
-          </Button> */}
           <a href="#services" className="inline-block translate-x-[50%]">
             <div className="scroll-down" />
           </a>
@@ -61,7 +56,7 @@ const Hero = () => {
                   alt="SeeBeyond"
                 />
 
-                <Solving className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
+                <Solving className="absolute font-grotesk left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
 
                 <ScrollParallax isAbsolutelyPositioned >
                   <a href="#services">
@@ -101,11 +96,10 @@ const Hero = () => {
                     />
                   </a>
                 </ScrollParallax>
-
               </div>
             </div>
 
-            {/* <Gradient /> */}
+            <Gradient />
           </div>
           <div className="absolute -top-[54%] left-1/2 w-[234%] -translate-x-1/2 md:-top-[46%] md:w-[138%] lg:-top-[104%]">
             <img
@@ -116,13 +110,10 @@ const Hero = () => {
               alt="hero"
             />
           </div>
-
           <BackgroundSqwaresHero className="z-0"/>
         </div>
-
         {showCompanyLogos && <CompanyLogos className="relative z-10 mt-20" />}
       </div>
-
       <BottomLine />
     </Section>
   );

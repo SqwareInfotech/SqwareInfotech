@@ -57,7 +57,7 @@ const sampleArcs = itHubs.map((hub) => ({
 
   return (
     <div className="flex items-center justify-center w-full h-full">
-      <div className="mx-auto w-full relative overflow-hidden h-72 px-4">
+      <div className="mx-auto relative overflow-hidden h-96 w-96">
         <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
     </div>

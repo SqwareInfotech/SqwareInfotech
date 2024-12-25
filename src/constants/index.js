@@ -360,7 +360,7 @@ export const socials = [
 export const contactDetails = [
   {
     id: "0",
-    title: "Address",
+    title: "Location",
     value: "Vadodara, Gujarat, India",
     show: true
   },

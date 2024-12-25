@@ -26,21 +26,21 @@ const AboutUs = () => {
 
 
                     <motion.div
-                        className="flex items-center gap-12 container mx-auto h-full p-6 flex-col lg:flex-row"
+                        className="flex items-center gap-6 h-full flex-col lg:flex-row lg:justify-evenly"
                         initial="initial"
                         variants={aboutVariants}
                     >
 
-                        <div className="flex-1 text-left">
+                        <div className="flex-1 text-left md:max-w-[42rem]">
                             <motion.div
-                                className="flex flex-col items-start gap-6 text-white text-center md:text-left"
+                                className="flex flex-col items-start gap-6 text-white text-center md:text-left "
                                 initial="hidden"
                                 whileInView="visible"
                                 variants={aboutVariants}
                                 viewport={{ once: false, margin: '-100px' }}
                             >
                                 <motion.p className="text-lg lg:text-xl max-w-3xl" variants={aboutVariants}>
-                                    We are innovators, problem solvers, and creators. At Sqware Infotech,
+                                    We are innovators, problem solvers, and catalysts. At Sqware Infotech,
                                     our goal is to help businesses harness the power of technology to
                                     deliver impactful solutions and drive success.
                                 </motion.p>
@@ -64,7 +64,6 @@ const AboutUs = () => {
 
                         <div className="relative">
                         <Globe/>
-
                         </div>
                     </motion.div>
                     <LeftLine />

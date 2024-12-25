@@ -150,14 +150,14 @@ export default {
           "@apply text-sm": {},
         },
         ".tagline": {
-          "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
+          "@apply font-grotesk font-light text-lg tracking-tagline uppercase":
             {},
         },
         ".quote": {
           "@apply font-code text-lg leading-normal": {},
         },
         ".button": {
-          "@apply font-code text-xs font-bold uppercase tracking-wider": {},
+          "@apply font-sans text-xs font-bold uppercase tracking-wider": {},
         },
         ".gradient-text": {
           "@apply bg-gradient-to-r from-n-14 to-n-15 bg-clip-text text-transparent animate-gradient-move bg-size-200": {},

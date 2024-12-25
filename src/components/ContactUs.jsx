@@ -1,5 +1,4 @@
 import Section from "./Section";
-// import { smallSphere, stars } from "../assets";
 import Heading from "./Heading";
 import { LeftLine, RightLine } from "./design/Pricing";
 import { useRef, useState, useEffect } from "react";
@@ -37,11 +36,10 @@ const ContactUs = () => {
     const isInView = useInView(ref, { margin: "200px" });
 
     useEffect(() => {
-        // If the element is in view when the component mounts, trigger the animation
         if (isInView) {
             controls.start("animate");
         } else {
-            controls.start("initial"); // Reset animation when out of view
+            controls.start("initial");
         }
     }, [isInView, controls]);
 
@@ -89,12 +87,12 @@ const ContactUs = () => {
                 <div className="relative">
                     <motion.div
                         ref={ref}
-                        className="flex items-center gap-12 container mx-auto h-full p-6 flex-col lg:flex-row"
+                        className="flex items-center gap-12 container mx-auto h-full flex-col lg:flex-row"
                         variants={variants}
                         initial="initial"
                         animate={controls}
                     >
-                        <motion.div className="flex flex-col gap-10 text-left lg:text-left" variants={variants} animate={controls}>
+                        <motion.div className="flex flex-col gap-6 text-left lg:text-left" variants={variants} animate={controls}>
                             <motion.h1 className="text-[64px] leading-tight lg:text-[100px] gradient-text" variants={variants} animate={controls}>Let’s work together</motion.h1>
 
                             {contactDetails.map((item) => ( item.show &&
@@ -194,7 +192,7 @@ const ContactUs = () => {
                                     transition={{ duration: 0.5 }}
                                 />
                                 <Button
-                                    className={`flex ${success ? "opacity-50 cursor-not-allowed" : ""
+                                    className={`flex lg:text-base ${success ? "opacity-50 cursor-not-allowed" : ""
                                         }`}
                                     type="submit"
                                     disabled={success} // Disable button after success

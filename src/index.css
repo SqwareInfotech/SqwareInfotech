@@ -151,15 +151,6 @@
   }
 }
 
-.text-gradient {
-  background: linear-gradient(90deg, #f472b6, #a855f7, #6366f1);
-  background-size: 200% 200%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: gradient 5s ease infinite;
-}
-
 .bg-size-200 {
   background-size: 200% 200%;
 }
