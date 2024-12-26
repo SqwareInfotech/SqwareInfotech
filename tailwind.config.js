@@ -150,7 +150,7 @@ export default {
           "@apply text-sm": {},
         },
         ".tagline": {
-          "@apply font-grotesk font-light text-lg tracking-tagline uppercase":
+          "@apply font-grotesk font-light text-xs tracking-tagline uppercase md:text-lg":
             {},
         },
         ".quote": {
@@ -164,9 +164,16 @@ export default {
         },
       });
       addUtilities({
-        ".tap-highlight-color": {
-          "-webkit-tap-highlight-color": "rgba(0, 0, 0, 0)",
+        '.tap-highlight-color': {
+          '-webkit-tap-highlight-color': 'rgba(0, 0, 0, 0)',
         },
+        '.drag-none': {
+					'-webkit-user-drag': 'none',
+					'-khtml-user-drag': 'none',
+					'-moz-user-drag': 'none',
+					'-o-user-drag': 'none',
+					'user-drag': 'none'
+				}
       });
     }),
   ],

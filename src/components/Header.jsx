@@ -7,7 +7,13 @@ import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { HamburgerMenu } from "./design/Header";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useMotionValueEvent,
+} from "framer-motion";
 
 const Header = () => {
   const pathname = useLocation();
@@ -30,9 +36,59 @@ const Header = () => {
     setOpenNavigation(false);
   };
 
+  const { scrollYProgress } = useScroll();
+
+  // set true for the initial state so that nav bar is visible in the hero section
+  const [visible, setVisible] = useState(true);
+
+  useMotionValueEvent(scrollYProgress, "change", (current) => {
+    // Check if current is not undefined and is a number
+    if (typeof current === "number") {
+      let direction = current - scrollYProgress.getPrevious();
+
+      if (scrollYProgress.get() < 0.05) {
+        // also set true for the initial state
+        setVisible(true);
+      } else {
+        if (direction < 0) {
+          setVisible(true);
+        } else {
+          setVisible(false);
+        }
+      }
+    }
+  });
+
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      setShowButton(scrolled > 786);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+
   return (
-    <div
-      className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
+    <AnimatePresence mode="wait">
+      <motion.div
+        initial={{
+          opacity: 1,
+          y: -100,
+        }}
+        animate={{
+          y: visible ? 0 : -100,
+          opacity: visible ? 1 : 0,
+        }}
+        transition={{
+          duration: 0.5,
+        }}
+      className={`fixed top-0 left-0 w-full border-b md:top-3 md:left-5 md:right-5 md:w-auto z-50 md:border border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
         openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
       }`}
     >
@@ -53,13 +109,13 @@ const Header = () => {
                 key={item.id}
                 href={item.url}
                 onClick={handleClick}
-                className={`block relative font-sans text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
+                className={`block relative font-sans text-2xl uppercase text-n-1 transition-colors hover:text-n-1/50 ${
                   item.onlyMobile ? "lg:hidden" : ""
-                } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xl lg:font-semibold ${
+                } px-6 py-6 lg:-mr-0.25 lg:text-base lg:font-semibold ${
                   item.url === pathname.hash
                     ? "z-2 lg:text-n-1"
                     : "lg:text-n-1/50"
-                } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+                } lg:leading-5 lg:hover:text-n-1`}
               >
                 {item.title}
               </a>
@@ -69,7 +125,7 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <Button className="hidden lg:flex lg:text-xl" href="#contactus">
+        <Button className="hidden lg:flex lg:text-base" href="#contactus">
           Contact us
         </Button>
 
@@ -81,7 +137,19 @@ const Header = () => {
           <MenuSvg openNavigation={openNavigation} />
         </Button>
       </div>
-    </div>
+      </motion.div>
+      <a href="#hero" className="fixed right-5 bottom-9 z-50">
+      {showButton && visible && (
+        <motion.div
+          className="scroll-up"
+          initial={{ opacity: 0, y: 36 }}
+          animate={{ opacity: 0.50, y: 0 }}
+          exit={{ opacity: 0, y: 0}}
+          transition={{ duration: 0.5 }}
+        />
+      )}
+    </a>
+      </AnimatePresence>
   );
 };
 

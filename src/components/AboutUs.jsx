@@ -11,7 +11,7 @@ const aboutVariants = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.7, ease: "easeInOut", staggerChildren: 0.2 },
+        transition: { duration: 1, ease: "easeInOut", staggerChildren: 0.3 },
     },
 };
 
@@ -37,7 +37,7 @@ const AboutUs = () => {
                                 initial="hidden"
                                 whileInView="visible"
                                 variants={aboutVariants}
-                                viewport={{ once: false, margin: '-100px' }}
+                                viewport={{ once: true, margin: '-100px' }}
                             >
                                 <motion.p className="text-lg lg:text-xl max-w-3xl" variants={aboutVariants}>
                                     We are innovators, problem solvers, and catalysts. At Sqware Infotech,
