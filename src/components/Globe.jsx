@@ -56,7 +56,7 @@ export function Globe() {
 
   return (
     <div className="flex items-center justify-center w-full h-full">
-      <div className="mx-auto relative overflow-hidden h-96 w-96">
+      <div className="mx-auto relative overflow-hidden h-72 w-72 md:h-96 md:w-96">
         <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
     </div>

@@ -85,6 +85,13 @@ import linkedIn from "./socials/linkedIn.svg";
 import youtube from "./socials/youtube.svg";
 import gmail from "./socials/gmail.svg";
 
+import chatWithSQL from "./projects/chat-with-sql.png"
+import chess from "./projects/chess.png"
+import rpg from "./projects/rpg.png"
+import superMario from "./projects/super-mario.png"
+import urlChatbot from "./projects/url-chatbot.png"
+import voiceAssistant from "./projects/voice-assistant.png"
+
 export {
   brainwave,
   check,
@@ -155,6 +162,12 @@ export {
   featureIcon5,
   featureIcon6,
   featureImage2,
+  chatWithSQL,
+  chess,
+  rpg,
+  superMario,
+  urlChatbot,
+  voiceAssistant,
   discordBlack,
   facebook,
   instagram,

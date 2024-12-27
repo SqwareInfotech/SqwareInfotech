@@ -61,9 +61,8 @@ const AboutUs = () => {
                                 </motion.div>
                             </motion.div>
                         </div>
-
                         <div className="relative">
-                        <Globe/>
+                            <Globe/>
                         </div>
                     </motion.div>
                     <LeftLine />

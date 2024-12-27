@@ -64,7 +64,6 @@ const Header = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      const totalHeight = document.body.scrollHeight - window.innerHeight;
       setShowButton(scrolled > 786);
     };
 
@@ -75,7 +74,7 @@ const Header = () => {
 
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <motion.div
         initial={{
           opacity: 1,
@@ -143,9 +142,9 @@ const Header = () => {
         <motion.div
           className="scroll-up"
           initial={{ opacity: 0, y: 36 }}
-          animate={{ opacity: 0.50, y: 0 }}
-          exit={{ opacity: 0, y: 0}}
-          transition={{ duration: 0.5 }}
+          animate={{ opacity: 0.75, y: 0 }}
+          exit={{ opacity: 0, y: 36 }}
+          transition={{ duration: 0.5, ease: "easeInOut" }} 
         />
       )}
     </a>

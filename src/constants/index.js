@@ -36,7 +36,13 @@ import {
   youtube,
   gmail,
   yourlogo,
-  seeBeyond
+  seeBeyond,
+  chatWithSQL,
+  chess,
+  rpg,
+  superMario,
+  urlChatbot,
+  voiceAssistant
 } from "../assets";
 
 export const navigation = [
@@ -88,42 +94,42 @@ export const brainwaveServicesIcons = [
   sliders04,
 ];
 
-export const roadmap = [
+export const projects = [
   {
     id: "0",
-    title: "Voice recognition",
-    text: "Enable the chatbot to understand and respond to voice commands, making it easier for users to interact with the app hands-free.",
-    date: "May 2023",
-    status: "done",
-    imageUrl: seeBeyond,
-    colorful: true,
+    title: "URL Web Scrapping Chatbot",
+    text: "An intelligent chatbot capable of scraping data from any URL in real-time, providing concise and accurate responses tailored to user queries. It simplifies research by making online content accessible in a conversational way.",
+    imageUrl: urlChatbot,
   },
   {
     id: "1",
-    title: "Gamification",
-    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
-    date: "May 2023",
-    status: "progress",
-    imageUrl: seeBeyond,
-    colorful: true,
+    title: "RPG Combat",
+    text: "Dive into the world of role-playing games with this thrilling combat simulation. It features strategic gameplay and dynamic battles, ensuring an engaging experience for players of all levels.",
+    imageUrl: rpg,
   },
   {
     id: "2",
-    title: "Chatbot customization",
-    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
-    date: "May 2023",
-    status: "done",
-    imageUrl: seeBeyond,
-    colorful: true,
+    title: "Super Mario",
+    text: "A reimagined classic! Relive the adventures of Mario with a modern twist, featuring enhanced graphics and smoother controls for an unforgettable nostalgic experience.",
+    imageUrl: superMario,
   },
   {
     id: "3",
-    title: "Integration with APIs",
-    text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
-    date: "May 2023",
-    status: "progress",
-    imageUrl: seeBeyond,
-    colorful: true,
+    title: "Chat with SQL",
+    text: "A conversational AI that understands and executes SQL queries, bridging the gap between technical databases and natural language. Simplify data analysis by just asking questions in plain English!",
+    imageUrl: chatWithSQL,
+  },
+  {
+    id: "4",
+    title: "Voice Assistant: Nova",
+    text: "Meet Nova, our AI-powered voice assistant that streamlines tasks, answers queries, and adapts to your needs. It's like having a personal assistant at your command, 24/7!",
+    imageUrl: voiceAssistant,
+  },
+  {
+    id: "5",
+    title: "Chess",
+    text: "A beautifully crafted chess platform for beginners and pros alike. Play against friends and refine your strategy with an intuitive interface.",
+    imageUrl: chess,
   },
 ];
 
@@ -246,6 +252,14 @@ export const services = [
     id: "0",
     title: "Software Development",
     text: "We deliver end-to-end solutions for web, app, and software development, ensuring high-quality performance, scalability, and seamless user experience.",
+    detailedText:
+      "Our software development services cover a broad range of solutions, including web applications, mobile apps, and enterprise-grade software. We focus on performance, scalability, and delivering user-centric designs to ensure your business objectives are met.",
+    subServices: [
+      "Web Application Development",
+      "Mobile Application Development",
+      "Enterprise Software Solutions",
+      "Custom Software Development",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon1,
     imageUrl: featureImage2,
@@ -255,6 +269,14 @@ export const services = [
     id: "1",
     title: "AI & Machine Learning",
     text: "Harness the power of AI and machine learning to develop intelligent, data-driven systems that revolutionize your business processes.",
+    detailedText:
+      "Leverage the latest advancements in AI and machine learning to transform your business processes. We develop smart algorithms, predictive models, and AI-driven solutions to enhance efficiency and decision-making.",
+    subServices: [
+      "Predictive Analytics",
+      "Natural Language Processing",
+      "Computer Vision Solutions",
+      "Custom AI Model Development",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon2,
     imageUrl: featureImage2,
@@ -264,6 +286,14 @@ export const services = [
     id: "2",
     title: "Game Development",
     text: "Our team specializes in crafting immersive games and interactive playable ads that captivate audiences and drive engagement.",
+    detailedText:
+      "From concept to execution, we create engaging and immersive games tailored to your audience. Our expertise includes 2D/3D game development, AR/VR integration, and interactive playable ads.",
+    subServices: [
+      "2D & 3D Game Development",
+      "Augmented & Virtual Reality Games",
+      "Interactive Playable Ads",
+      "Game Optimization and Testing",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon3,
     imageUrl: featureImage2,
@@ -273,6 +303,14 @@ export const services = [
     id: "3",
     title: "UI/UX & Graphic Designing",
     text: "We create stunning UI/UX designs and captivating graphics to ensure your brand's digital presence stands out and drives user satisfaction.",
+    detailedText:
+      "Our design team specializes in crafting intuitive and visually appealing designs. From wireframes to prototypes, we ensure every design aspect resonates with your brand identity and user expectations.",
+    subServices: [
+      "UI/UX Wireframing and Prototyping",
+      "Responsive Web and App Designs",
+      "Brand Identity and Logo Creation",
+      "Graphic and Motion Design",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon4,
     imageUrl: featureImage2,
@@ -282,6 +320,14 @@ export const services = [
     id: "4",
     title: "Business Intelligence",
     text: "Our BI services leverage data visualization and analytics tools to transform complex data into actionable insights for informed decision-making.",
+    detailedText:
+      "Empower your business with insights derived from data. Our BI solutions include advanced dashboards, predictive analytics, and custom reporting tools that help you make data-driven decisions.",
+    subServices: [
+      "Data Visualization and Dashboards",
+      "Predictive Analytics",
+      "Custom Reporting Solutions",
+      "Data Integration and ETL Services",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon5,
     imageUrl: featureImage2,
@@ -291,12 +337,21 @@ export const services = [
     id: "5",
     title: "Digital Marketing",
     text: "We provide tailored digital marketing strategies, from SEO to social media campaigns, to boost your online presence and drive business growth.",
+    detailedText:
+      "Maximize your brand's online potential with our comprehensive digital marketing services. We offer SEO, PPC, social media marketing, and content strategies tailored to your goals.",
+    subServices: [
+      "Search Engine Optimization (SEO)",
+      "Pay-Per-Click Advertising (PPC)",
+      "Social Media Marketing",
+      "Content Marketing and Blogging",
+    ],
     backgroundUrl: featureCard0,
     iconUrl: featureIcon6,
     imageUrl: featureImage2,
     light: true,
   },
 ];
+
 
 export const socials = [
   {
