@@ -24,7 +24,7 @@ const Workfolio = () => {
                 className={`md:flex-even:md:translate-y-[8rem] p-1 rounded-[2.5rem] bg-conic-gradient`}
                 key={item.id}
               >
-                <CardBody className="relative flex flex-col justify-between p-8 bg-n-8 rounded-[2.4375rem] h-full md:h-[45rem] xl:h-[52rem] xl:p-15 xl:p-15">
+                <CardBody className="relative flex flex-col justify-between p-8 bg-n-8 rounded-[2.4375rem] h-full md:h-[45rem] xl:h-[50rem] xl:p-15 xl:p-15">
                   <div className="absolute top-0 left-0 max-w-full">
                     <img className="w-full min-h-fit" src={grid} alt="Grid" />
                   </div>
