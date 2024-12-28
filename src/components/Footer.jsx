@@ -38,7 +38,7 @@ const Footer = () => {
                     <a
                       href={socials[7].url}
                       target="_blank"
-                      className="transition duration-200 hover:text-color-2">
+                      className="transition duration-200 hover:gradient-text">
                       <span> {item.value}</span>
                     </a>
                   ) : (

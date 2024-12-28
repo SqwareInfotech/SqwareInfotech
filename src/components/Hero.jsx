@@ -6,7 +6,8 @@ import { useRef } from "react";
 import Solving from "./Solving";
 import Notification from "./Notification";
 import CompanyLogos from "./CompanyLogos";
-import { services, showCompanyLogos } from "../constants";
+import TechLogos from "./TechLogos";
+import { services, showCompanyLogos, showTechLogos } from "../constants";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -110,11 +111,9 @@ const Hero = () => {
           <BackgroundSqwaresHero className="z-0"/>
         </div>
         {showCompanyLogos && <CompanyLogos className="relative z-10 mt-20" />}
+        {showTechLogos && <TechLogos className="relative z-10 mt-20" />}
       </div>
       <BottomLine />
-      {/* <a href="#hero" className="fixed right-5 bottom-5 z-20">
-        <div className="scroll-down" />
-      </a> */}
     </Section>
   );
 };

@@ -17,9 +17,6 @@ import {
   framer,
   homeSmile,
   instagram,
-  notification2,
-  notification3,
-  notification4,
   notion,
   photoshop,
   plusSquare,
@@ -36,7 +33,22 @@ import {
   youtube,
   gmail,
   yourlogo,
-  seeBeyond,
+  react,
+  angular,
+  node,
+  dotnet,
+  unity,
+  unreal,
+  opencv,
+  powerbi,
+  mssql,
+  mysql,
+  azure,
+  aws,
+  tensorflow,
+  figmasvg,
+  photoshopsvg,
+  blender,
   chatWithSQL,
   chess,
   rpg,
@@ -74,11 +86,30 @@ export const navigation = [
 
 export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
-export const notificationImages = [notification4, notification3, notification2];
-
 export const companyLogos = [yourlogo, yourlogo, yourlogo, yourlogo, yourlogo];
 
-export const showCompanyLogos = true;
+export const showCompanyLogos = false;
+
+export const showTechLogos = true;
+
+export const techLogos = [
+  { src: react, width: 50, height: 50 },
+  { src: angular, width: null, height: null },
+  { src: node, width: null, height: null },
+  { src: dotnet, width: 50, height: null },
+  { src: unity, width: null, height: null },
+  { src: unreal, width: null, height: null },
+  { src: opencv, width: 50, height: 50 },
+  { src: tensorflow, width: null, height: null },
+  { src: powerbi, width: null, height: null },
+  { src: mssql, width: null, height: null },
+  { src: mysql, width: 125, height: null },
+  { src: azure, width: null, height: null },
+  { src: aws, width: null, height: null },
+  { src: figmasvg, width: null, height: null },
+  { src: photoshopsvg, width: null, height: null },
+  { src: blender, width: null, height: null },
+];
 
 export const brainwaveServices = [
   "Photo generating",

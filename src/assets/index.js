@@ -47,20 +47,6 @@ import service3 from "./services/service-3.png";
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
 
-import coins from "./roadmap/coins.png";
-import done from "./roadmap/done.svg";
-import hero from "./roadmap/hero.png";
-import roadmap1 from "./roadmap/image-1.png";
-import roadmap2 from "./roadmap/image-2.png";
-import roadmap3 from "./roadmap/image-3.png";
-import roadmap4 from "./roadmap/image-4.png";
-import undone from "./roadmap/undone.svg";
-
-import notification1 from "./notification/image-1.png";
-import notification2 from "./notification/image-2.png";
-import notification3 from "./notification/image-3.png";
-import notification4 from "./notification/image-4.png";
-
 import featureCard0 from "./card-0.svg";
 import featureCard1 from "./features/card-1.svg";
 import featureCard2 from "./features/card-2.svg";
@@ -91,6 +77,23 @@ import rpg from "./projects/rpg.png"
 import superMario from "./projects/super-mario.png"
 import urlChatbot from "./projects/url-chatbot.png"
 import voiceAssistant from "./projects/voice-assistant.png"
+
+import react from "./techstack/react.png"
+import angular from "./techstack/angular.svg"
+import node from "./techstack/node.svg"
+import dotnet from "./techstack/dotnet.png"
+import unity from "./techstack/unity.svg"
+import unreal from "./techstack/unreal.svg"
+import opencv from "./techstack/opencv.png"
+import powerbi from "./techstack/powerbi.svg"
+import mssql from "./techstack/mssql.svg"
+import mysql from "./techstack/mysql.png"
+import azure from "./techstack/azure.svg"
+import aws from "./techstack/aws.svg"
+import tensorflow from "./techstack/tensorflow.svg"
+import figmasvg from "./techstack/figma.svg"
+import photoshopsvg from "./techstack/photoshop.svg"
+import blender from "./techstack/blender.svg"
 
 export {
   brainwave,
@@ -136,18 +139,6 @@ export {
   service3,
   lines,
   stars,
-  coins,
-  done,
-  hero,
-  roadmap1,
-  roadmap2,
-  roadmap3,
-  roadmap4,
-  undone,
-  notification1,
-  notification2,
-  notification3,
-  notification4,
   featureCard0,
   featureCard1,
   featureCard2,
@@ -168,6 +159,22 @@ export {
   superMario,
   urlChatbot,
   voiceAssistant,
+  react,
+  angular,
+  node,
+  dotnet,
+  unity,
+  unreal,
+  opencv,
+  powerbi,
+  mssql,
+  mysql,
+  azure,
+  aws,
+  tensorflow,
+  figmasvg,
+  photoshopsvg,
+  blender,
   discordBlack,
   facebook,
   instagram,

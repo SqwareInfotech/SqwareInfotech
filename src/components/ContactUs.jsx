@@ -102,7 +102,7 @@ const ContactUs = () => {
                                         <a
                                         href={socials[7].url}
                                         target="_blank"
-                                        className="text-white transition duration-200 hover:text-color-2">
+                                        className="text-white transition duration-200 hover:gradient-text">
                                             <span>{item.value}</span>
                                         </a>
                                      ) : (
@@ -117,7 +117,7 @@ const ContactUs = () => {
                                 className="absolute inset-0 z-[-1] flex justify-center"
                                 initial={{ opacity: 1 }}
                                 whileInView={{ opacity: 0 }}
-                                transition={{ delay: 2, duration: 2 }}
+                                transition={{ delay: 3, duration: 1 }}
                                 animate={controls}
                                 viewport={{ once: true }}
                             >
@@ -134,7 +134,7 @@ const ContactUs = () => {
                                         fill="none"
                                         initial={{ pathLength: 0 }}
                                         animate={{ pathLength: isInView ? 1.1 : 0 }}
-                                        transition={{ duration: 3 }}
+                                        transition={{ duration: 4 }}
                                         viewport={{ once: true }}
                                         d="M12,13c-4.40644,0 -8,3.59356 -8,8v23c0,4.40644 3.59356,8 8,8h40c4.40644,0 8,-3.59356 8,-8v-16c0.0051,-0.36064 -0.18438,-0.69608 -0.49587,-0.87789c-0.3115,-0.18181 -0.69676,-0.18181 -1.00825,0c-0.3115,0.18181 -0.50097,0.51725 -0.49587,0.87789v16c0,3.32556 -2.67444,6 -6,6h-40c-3.32556,0 -6,-2.67444 -6,-6v-23c0,-3.32556 2.67444,-6 6,-6h40c3.11328,0 5.56893,2.3746 5.88086,5.40234l-25.8457,11.48828l-20.57031,-10.77734c-0.3168,-0.16617 -0.6982,-0.15067 -1.00048,0.04065c-0.30228,0.19132 -0.47951,0.52939 -0.4649,0.88683c0.0146,0.35744 0.21882,0.67993 0.53569,0.84596l21,11c0.27092,0.14181 0.59182,0.15188 0.87109,0.02734l27,-12c0.36115,-0.16059 0.59384,-0.51882 0.59375,-0.91406c0,-4.40644 -3.59356,-8 -8,-8z"
                                     />
