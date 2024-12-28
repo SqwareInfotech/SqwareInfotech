@@ -142,7 +142,7 @@ const Header = () => {
         <motion.div
           className="scroll-up"
           initial={{ opacity: 0, y: 36 }}
-          animate={{ opacity: 0.75, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 36 }}
           transition={{ duration: 0.5, ease: "easeInOut" }} 
         />

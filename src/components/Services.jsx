@@ -133,7 +133,7 @@ const Services = () => {
                         transition={{ delay: index * 0.15 + 0.25, duration: 0.5 }}
                       >
                         <div className="w-3 h-3 mr-4 rounded-full bg-gradient-to-br from-n-14 to-n-15 group-hover:scale-150 transition-transform"></div>
-                        <span className="group-hover:gradient-text group-hover:font-extrabold group-hover:scale-105 transition-all duration-0">
+                        <span className="group-hover:gradient-text group-hover:font-extrabold group-hover:scale-105 transition-all duration-0 ">
                           {subService}
                         </span>
                       </motion.li>
