@@ -2,7 +2,6 @@ import Heading from "./Heading";
 import Section from "./Section";
 import { projects } from "../constants";
 import { grid } from "../assets";
-import { motion } from 'framer-motion';
 import { CardBody, CardContainer, CardItem } from "../components/design/3d-card";
 
 const textVariants = {

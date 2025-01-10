@@ -103,6 +103,7 @@ const Hero = () => {
             <img
               src={heroBackground}
               className="w-full fade-bg"
+              loading="eager"
               width={1080}
               height={1080}
               alt="hero"

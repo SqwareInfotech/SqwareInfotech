@@ -57,10 +57,10 @@ export default {
         15: ".15",
       },
       transitionDuration: {
-        DEFAULT: "200ms",
+        DEFAULT: "300ms",
       },
       transitionTimingFunction: {
-        DEFAULT: "linear",
+        DEFAULT: "ease-in-out",
       },
       zIndex: {
         1: "1",
@@ -83,12 +83,12 @@ export default {
         rotate: "rotate 5s linear infinite",
         marquee: "marquee 2s linear infinite",
         loop: "loop 5s linear infinite",
-        'gradient-move': 'gradient 12s ease infinite',
+        'gradient-move': 'gradient 12s ease-in-out infinite',
       },
       keyframes: {
         rotate: {
-          "0%": { transform: "rotate(0deg) scale(10)" },
-          "100%": { transform: "rotate(-360deg) scale(10)" },
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" },
         },
         marquee : {
           "0%": { transform: "translateX(0)" },
@@ -107,8 +107,6 @@ export default {
           },
         },
       },
-      
-
     },
   },
   plugins: [

@@ -1,6 +1,6 @@
 import Section from "./Section";
 import Heading from "./Heading";
-import { LeftLine, RightLine } from "./design/Pricing";
+import { LeftLine, RightLine } from "./design/ContactUs";
 import { useRef, useState, useEffect } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import emailjs from "@emailjs/browser";

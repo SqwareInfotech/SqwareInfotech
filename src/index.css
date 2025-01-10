@@ -156,6 +156,10 @@
   background-size: 200% 200%;
 }
 
+.scale-exact-7 {
+  scale: 7;
+}
+
 /* 
 #38b6ff: Light Blue - 14
 #148fd7:Dark Blue - 16

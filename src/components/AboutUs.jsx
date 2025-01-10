@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import Section from "./Section";
 import Heading from "./Heading";
-import { LeftLine, RightLine } from "./design/Pricing";
+import { LeftLine, RightLine } from "./design/ContactUs";
 
 import { Globe } from "./Globe"; // Adjust path as per your project structure
 

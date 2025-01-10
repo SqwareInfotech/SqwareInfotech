@@ -27,7 +27,7 @@ import background from "./background.jpg";
 
 import curve from "./hero/curve.svg";
 import seeBeyond from "./hero/see-beyond.png";
-import heroBackground from "./hero/hero-background.png";
+import heroBackground from "./hero/hero-background.webp";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
@@ -71,12 +71,12 @@ import linkedIn from "./socials/linkedIn.svg";
 import youtube from "./socials/youtube.svg";
 import gmail from "./socials/gmail.svg";
 
-import chatWithSQL from "./projects/chat-with-sql.png"
-import chess from "./projects/chess.png"
-import rpg from "./projects/rpg.png"
-import superMario from "./projects/super-mario.png"
-import urlChatbot from "./projects/url-chatbot.png"
-import voiceAssistant from "./projects/voice-assistant.png"
+import chatWithSQL from "./projects/chat-with-sql.webp"
+import chess from "./projects/chess.webp"
+import rpg from "./projects/rpg.webp"
+import superMario from "./projects/super-mario.webp"
+import urlChatbot from "./projects/url-chatbot.webp"
+import voiceAssistant from "./projects/voice-assistant.webp"
 
 import react from "./techstack/react.png"
 import angular from "./techstack/angular.svg"
