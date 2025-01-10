@@ -25,7 +25,7 @@ const Services = () => {
 
   useEffect(() => {
     if (navigateToContact) {
-      document.querySelector('#contactus')?.scrollIntoView({ behavior: 'smooth' });
+      document.querySelector('#contact-us')?.scrollIntoView({ behavior: 'smooth' });
       setNavigateToContact(false);
     }
   }, [navigateToContact]);

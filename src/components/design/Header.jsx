@@ -1,4 +1,4 @@
-import nav_bg_mobile from "../../assets/nav_bg_mobile.png";
+import { heroBackground } from "../../assets";
 
 export const Sqwares = () => {
   return (
@@ -54,7 +54,7 @@ export const HamburgerMenu = () => {
       <div className="absolute inset-0 opacity-[.03]">
         <img
           className="w-full h-full object-cover"
-          src={nav_bg_mobile}
+          src={heroBackground}
           width={688}
           height={953}
           alt="Background"

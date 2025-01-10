@@ -17,7 +17,7 @@ const aboutVariants = {
 
 const AboutUs = () => {
     return (
-        <Section crosses id="aboutus">
+        <Section crosses id="about-us">
             <div className="container relative z-2">
                 <Heading
                     tag="About Sqware Infotech"

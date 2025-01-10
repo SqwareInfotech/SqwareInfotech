@@ -92,7 +92,7 @@ const Header = () => {
       }`}
     >
       <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="block w-[12rem] xl:mr-8" href="#hero">
+        <a className="block w-[12rem] xl:mr-8" href="#home">
           <img src={banner_Sqware_bgless} width={190} height={40} alt="Sqware Infotech" />
         </a>
 
@@ -124,7 +124,7 @@ const Header = () => {
           <HamburgerMenu />
         </nav>
 
-        <Button className="hidden lg:flex lg:text-base" href="#contactus">
+        <Button className="hidden lg:flex lg:text-base" href="#contact-us">
           Contact us
         </Button>
 
@@ -137,7 +137,7 @@ const Header = () => {
         </Button>
       </div>
       </motion.div>
-      <a href="#hero" className="fixed right-5 bottom-9 z-50">
+      <a href="#home" className="fixed right-5 bottom-9 z-50">
       {showButton && visible && (
         <motion.div
           className="scroll-up"

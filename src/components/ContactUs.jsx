@@ -74,7 +74,7 @@ const ContactUs = () => {
       };
 
     return (
-        <Section crosses id="contactus"
+        <Section crosses id="contact-us"
         >
             <div className="container relative z-2 ">
 
